@@ -1,5 +1,8 @@
 import React from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
+import Time from '../../public/icon/time.png';
+import Pen from '../../public/icon/pen.png';
+import Option from '../../public/icon/option.png';
 
 const dataTodo = [
   {
@@ -69,21 +72,13 @@ const TodoContent = () => {
                     <IoIosArrowUp />
                   </span>
                   <span className="">
-                    <img
-                      src="../../public/icon/option.png"
-                      alt=""
-                      className="w-5 cursor-pointer"
-                    />
+                    <img src={Option} alt="" className="w-5 cursor-pointer" />
                   </span>
                 </div>
               </div>
               <div className="mx-10 my-3 ">
                 <div className="flex items-center gap-x-5">
-                  <img
-                    src="../../public/icon/time.png"
-                    alt="time"
-                    className="w-6 h-6"
-                  />
+                  <img src={Time} alt="time" className="w-6 h-6" />
                   <input
                     type="date"
                     className="border border-slate-500 p-2 rounded"
@@ -91,11 +86,7 @@ const TodoContent = () => {
                   />
                 </div>
                 <div className="flex gap-x-6 mt-2">
-                  <img
-                    src="../../public/icon/pen.png"
-                    alt="time"
-                    className="w-4 h-4"
-                  />
+                  <img src={Pen} alt="time" className="w-4 h-4" />
                   <p className="text-justify">{item.desc}</p>
                 </div>
               </div>

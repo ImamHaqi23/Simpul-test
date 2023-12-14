@@ -1,9 +1,11 @@
 import React from 'react';
+import iconSearch2 from '../../public/icon/search2.png';
+import groupChat from '../../public/icon/groupChat.png';
 
 const dataChat = [
   {
     id: 1,
-    img: '../../public/icon/groupChat.png',
+    img: groupChat,
     title: '109220-Naturalization',
     date: 'January 1,2021 19:10',
     name: 'Cameron Philips',
@@ -11,7 +13,7 @@ const dataChat = [
   },
   {
     id: 2,
-    img: '../../public/icon/groupChat.png',
+    img: groupChat,
     title:
       'Jeanette Moraima Guaman Chamba (Hutto I-589) [ Hutto Follow Up - Brief Service ]',
     date: '02/06/2021 10:45',
@@ -20,7 +22,7 @@ const dataChat = [
   },
   {
     id: 3,
-    img: '../../public/icon/groupChat.png',
+    img: groupChat,
     title: '8405-Diana SALAZAR MUNGUIA',
     date: '01/06/2021 12:19',
     name: 'Cameron Philips',
@@ -42,11 +44,7 @@ const ChatContent = () => {
         </div>
         <div className="absolute top-3 right-10">
           {' '}
-          <img
-            src="../../public/icon/search2.png"
-            alt="Search Icon"
-            className="w-3 h-3"
-          />
+          <img src={iconSearch2} alt="Search Icon" className="w-3 h-3" />
         </div>
       </div>
       <div className="overflow-y-auto h-full">

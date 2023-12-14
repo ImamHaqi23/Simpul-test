@@ -3,6 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Popup from './Popup';
 import ChatContent from './ChatContent';
 import TodoContent from './TodoContent';
+import iconToggle from '../../public/icon/toggle.png';
+import Todo1 from '../../public/icon/todo-1.png';
+import Todo2 from '../../public/icon/todo-2.png';
+import Chat1 from '../../public/icon/chat-1.png';
+import Chat2 from '../../public/icon/chat-2.png';
 
 const Main = () => {
   const [showIcons, setShowIcons] = useState(false);
@@ -35,7 +40,7 @@ const Main = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 20 }}
         >
-          <img src="../../public/icon/toggle.png" alt="menu" className="w-3" />
+          <img src={iconToggle} alt="menu" className="w-3" />
         </motion.div>
       </div>
       <AnimatePresence>
@@ -54,11 +59,7 @@ const Main = () => {
               onClick={handleTodo}
             >
               <img
-                src={`${
-                  todoIcons
-                    ? '../../public/icon/chat-2.png'
-                    : '../../public/icon/chat-1.png'
-                }`}
+                src={`${todoIcons ? Chat2 : Chat1}`}
                 alt="menu"
                 className="w-5"
               />
@@ -73,11 +74,7 @@ const Main = () => {
               onClick={handleChat}
             >
               <img
-                src={`${
-                  chatIcons
-                    ? '../../public/icon/todo-2.png'
-                    : '../../public/icon/todo-1.png'
-                }`}
+                src={`${chatIcons ? Todo2 : Todo1}`}
                 alt="menu"
                 className="w-5"
               />
