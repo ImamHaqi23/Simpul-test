@@ -6,9 +6,9 @@ const Popup = ({ isOpen, content }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-24 right-20 bg-white p-4 rounded-md shadow-md "
+          className="fixed bottom-24 right-8 bg-white overflow-hidden rounded-md shadow-md "
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0, x: 65 }}
+          animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
         >
           {content}
